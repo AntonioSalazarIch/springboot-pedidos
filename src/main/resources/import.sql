@@ -46,3 +46,13 @@ INSERT INTO public.direcciones ( zona, calle, numero ) VALUES ( 'VILLA COPACABAN
 INSERT INTO public.direcciones ( zona, calle, numero ) VALUES ( 'GARITA'           , 'CARRASCO'        , '102' );
 
 
+/* CLIENTES_COMPRAS */
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 1, 2 );
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 2, 2 );
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 2 );
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 4, 1 );
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 4 );
+INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 5 );
+
+
+
