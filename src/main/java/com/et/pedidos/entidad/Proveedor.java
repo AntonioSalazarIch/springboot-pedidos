@@ -14,7 +14,8 @@ public class Proveedor implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    @Column( name = "proveedor_id" )
+    private Long proveedorId;
 
     @Column( name = "nit_proveedor", unique = true )
     private String nitProveedor;
@@ -22,12 +23,12 @@ public class Proveedor implements Serializable {
     @Column( name = "nombre_proveedor" )
     private String nombreProveedor;
 
-    public Long getId() {
-        return id;
+    public Long getProveedorId() {
+        return proveedorId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProveedorId(Long proveedorId) {
+        this.proveedorId = proveedorId;
     }
 
     public String getNitProveedor() {

@@ -1,7 +1,11 @@
 package com.et.pedidos.entidad;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table( name = "productos" )
@@ -14,7 +18,8 @@ public class Producto implements Serializable {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    @Column( name = "producto_id" )
+    private Long productoId;
 
     @Column( name = "codigo_producto", unique = true )
     private String codigoProducto;
@@ -26,12 +31,12 @@ public class Producto implements Serializable {
 
     private String descripcion;
 
-    public Long getId() {
-        return id;
+    public Long getProductoId() {
+        return productoId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setProductoId(Long productoId) {
+        this.productoId = productoId;
     }
 
     public String getCodigoProducto() {

@@ -14,7 +14,8 @@ public class Direccion implements Serializable  {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
+    @Column( name = "direccion_id" )
+    private Long direccionId;
 
     private String numero;
 
@@ -22,12 +23,12 @@ public class Direccion implements Serializable  {
 
     private String zona;
 
-    public Long getId() {
-        return id;
+    public Long getDireccionId() {
+        return direccionId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDireccionId(Long direccionId) {
+        this.direccionId = direccionId;
     }
 
     public String getNumero() {

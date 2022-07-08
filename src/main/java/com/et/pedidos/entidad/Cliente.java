@@ -1,13 +1,11 @@
 package com.et.pedidos.entidad;
 
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
+import java.util.Set;
+
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
@@ -22,7 +20,8 @@ public class Cliente implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long id;
+	@Column( name = "cliente_id" )
+	private Long clienteId;
 	
 	@NotBlank( message = "El campo 'nombres' no debe estar vacio" )
 	private String nombres;
@@ -40,13 +39,15 @@ public class Cliente implements Serializable {
 	@Email
 	@Column( name = "nit_cliente", unique = true )
 	private String nitCliente;
-	
-	public Long getId() {
-		return id;
+
+	public Long getClienteId() {
+		return clienteId;
 	}
-	public void setId(Long id) {
-		this.id = id;
+
+	public void setClienteId(Long clienteId) {
+		this.clienteId = clienteId;
 	}
+
 	public String getNombres() {
 		return nombres;
 	}

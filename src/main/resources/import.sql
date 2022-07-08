@@ -46,13 +46,13 @@ INSERT INTO public.direcciones ( zona, calle, numero ) VALUES ( 'VILLA COPACABAN
 INSERT INTO public.direcciones ( zona, calle, numero ) VALUES ( 'GARITA'           , 'CARRASCO'        , '102' );
 
 
-/* CLIENTES_COMPRAS */
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 1, 2 );
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 2, 2 );
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 2 );
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 4, 1 );
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 4 );
-INSERT INTO public.compras ( cliente_id, producto_id ) VALUES ( 3, 5 );
+/* COMPRAS */
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 1, 2, 2, 25.0 , '2020-02-23 09:45:00' );
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 2, 2, 2, 50.0 , '2020-03-23 09:45:00' );
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 3, 2, 2, 150.0, '2020-04-23 09:45:00' );
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 4, 1, 4, 250.5, '2020-02-22 09:45:00' );
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 3, 4, 5, 100.7, '2020-02-22 09:45:00' );
+--INSERT INTO public.compras ( cliente_id, producto_id, cantidad, precio, fecha_compra ) VALUES ( 3, 5, 6, 120.7, '2020-06-21 09:45:00' );
 
 
 
