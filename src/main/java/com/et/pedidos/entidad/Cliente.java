@@ -1,5 +1,6 @@
 package com.et.pedidos.entidad;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
@@ -39,6 +40,19 @@ public class Cliente implements Serializable {
 	@Email
 	@Column( name = "nit_cliente", unique = true )
 	private String nitCliente;
+
+
+	@OneToMany( mappedBy="cliente" )
+	@JsonIgnoreProperties( { "productoClientes","cliente" ,"producto" } )
+	Set<ProductoCliente> productoClientes;
+
+	public Set<ProductoCliente> getProductoClientes() {
+		return productoClientes;
+	}
+
+	public void setProductoClientes(Set<ProductoCliente> productoClientes) {
+		this.productoClientes = productoClientes;
+	}
 
 	public Long getClienteId() {
 		return clienteId;

@@ -27,6 +27,17 @@ public class Producto implements Serializable {
     @Column( name = "nombre_producto" )
     private String nombreProducto;
 
+    @OneToMany( mappedBy="producto" )
+    Set<ProductoCliente> productoClientes;
+
+    public Set<ProductoCliente> getProductoClientes() {
+        return productoClientes;
+    }
+
+    public void setProductoClientes(Set<ProductoCliente> productoClientes) {
+        this.productoClientes = productoClientes;
+    }
+
     private String color;
 
     private String descripcion;
